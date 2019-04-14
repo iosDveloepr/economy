@@ -8,9 +8,18 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
 
+    let viewModel = MainViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.loadStationsFromJSON()
+    }
+    
 
+    
     @IBAction func toTopicBtn(_ sender: UIButton) {
         
         switch sender.tag {
@@ -27,6 +36,5 @@ class MainViewController: UIViewController {
         }
     }
     
-
 }
 
