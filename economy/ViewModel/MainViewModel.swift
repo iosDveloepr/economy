@@ -9,31 +9,46 @@
 import UIKit
 import CoreData
 
+
 class MainViewModel{
     
     let container : NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    var dataManager: DataManager
     
-    func loadStationsFromJSON() {
+    init(dataManager: DataManager){
+        self.dataManager = dataManager
+    }
+    
+ 
+    func loadStationsFromJSON(resource: Topics) {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        DataManager.getDataFromFileWithSuccess() { (data) in
+        dataManager.getData(resource: resource) { (data) in
             
             defer {
                 DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
             }
             
-            guard let data = data, let jsonDictionary = try? JSONDecoder().decode([String: [Topic]].self, from: data), let stationsArray = jsonDictionary["Economy"] else {
+            guard let data = data, let jsonDictionary = try? JSONDecoder().decode([String: [Topic]].self, from: data), let stationsArray = jsonDictionary[resource.rawValue] else {
                 return
             }
-            updateDatabase(with: stationsArray)
+            
+            updateDatabase(resource: resource, topics: stationsArray)
         }
     }
     
-    private func updateDatabase(with topics: [Topic]){
+    private func updateDatabase(resource: Topics, topics: [Topic]){
         container?.performBackgroundTask{ context in
             for topicInfo in topics{
-                _ = try? Economy.findOrCreateEconomy(matching: topicInfo, in: context)
+                switch resource{
+                case .Economy:
+                    _ = try? Economy.findOrCreateEconomy(matching: topicInfo, in: context)
+                case .Marketing:
+                    _ = try? Marketing.findOrCreateMarketing(matching: topicInfo, in: context)
+                default:
+                    break
+                }
             }
             try? context.save()
         }

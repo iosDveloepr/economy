@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct TopicRouter: RouterProtocol{
+struct EconomyRouter: RouterProtocol{
     
     weak var presenter: UINavigationController?
     
@@ -22,15 +22,13 @@ struct TopicRouter: RouterProtocol{
     }
     
 
-    func getTopicContainercontroller() -> TopicsTableViewController {
-        return controller(type: TopicsTableViewController.self)!
+    func getTopicContainercontroller() -> EconomyTableViewController {
+        return controller(type: EconomyTableViewController.self)!
     }
     
     
-    func presentTopic(paramsTopic: String){
-        let topicController = controller(type: TopicsTableViewController.self)!
-        topicController.topic = paramsTopic
+    func presentEconomicModule(){
+        let topicController = controller(type: EconomyTableViewController.self)!
         push(topicController)
     }
-    
 }

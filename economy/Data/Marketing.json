@@ -1,0 +1,23 @@
+{
+    "Marketing":
+    [
+        {
+            "id": 1,
+            "term": "marketing 1",
+            "description": "Zidan",
+            "category": "marketing",
+        },
+        {
+            "id": 2,
+            "term": "marketing 2",
+            "description": "fdfdssdffsdfsd",
+            "category": "marketing"
+        },
+        {
+            "id": 3,
+            "term": "marketing 3",
+            "description": "fdfdssdffsdfsd",
+            "category": "marketing"
+        }
+    ]
+}

@@ -11,11 +11,15 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    let viewModel = MainViewModel()
+    let dataManager = FileDataManager()
+    var viewModel: MainViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.loadStationsFromJSON()
+        
+        viewModel = MainViewModel(dataManager: dataManager)
+        viewModel.loadStationsFromJSON(resource: Topics.Economy)
+        viewModel.loadStationsFromJSON(resource: Topics.Marketing)
     }
     
 
@@ -24,13 +28,13 @@ class MainViewController: UIViewController {
         
         switch sender.tag {
         case 0:
-           TopicRouter(presenter: self.navigationController).presentTopic(paramsTopic: "economy")
+            EconomyRouter(presenter: self.navigationController).presentEconomicModule()
         case 1:
-            TopicRouter(presenter: self.navigationController).presentTopic(paramsTopic: "stock")
+            MarketingRouter(presenter: self.navigationController).presentMarketingModule()
         case 2:
-             TopicRouter(presenter: self.navigationController).presentTopic(paramsTopic: "business")
+            EconomyRouter(presenter: self.navigationController).presentEconomicModule()
         case 3:
-            TopicRouter(presenter: self.navigationController).presentTopic(paramsTopic: "marketing")
+            EconomyRouter(presenter: self.navigationController).presentEconomicModule()
         default:
             break
         }

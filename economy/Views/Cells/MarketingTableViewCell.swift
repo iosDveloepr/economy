@@ -1,16 +1,15 @@
 //
-//  TopicTableViewCell.swift
+//  MarketingTableViewCell.swift
 //  economy
 //
-//  Created by Yermakov Anton on 4/14/19.
+//  Created by Yermakov Anton on 4/15/19.
 //  Copyright © 2019 Yermakov Anton. All rights reserved.
 //
 
 import UIKit
 
-class TopicTableViewCell: UITableViewCell {
-    
-    
+class MarketingTableViewCell: UITableViewCell {
+
     @IBOutlet weak var term: UILabel!
     
     override func awakeFromNib() {
@@ -24,8 +23,8 @@ class TopicTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp(topic: Economy){
-        term.text = topic.term
+    func setUp(marketing: Marketing){
+        term.text = marketing.term
     }
 
 }

@@ -1,61 +1,59 @@
 //
-//  TopicsTableViewController.swift
+//  MarketingTableViewController.swift
 //  economy
 //
-//  Created by Yermakov Anton on 4/13/19.
+//  Created by Yermakov Anton on 4/15/19.
 //  Copyright © 2019 Yermakov Anton. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class TopicsTableViewController: FetchedResultsTableViewController {
-    
+class MarketingTableViewController: FetchedResultsTableViewController {
+
     var container : NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
-    var fetchedResultsController: NSFetchedResultsController<Economy>?
+    var fetchedResultsController: NSFetchedResultsController<Marketing>?
     
-    var topic: String!{
-        didSet{
-            updateUI()
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
     }
     
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         printDatabaseStatistic()
+        printDatabaseStatistic()
     }
+    
     
     
     private func updateUI(){
-        if let context = container?.viewContext, topic != nil{
+        if let context = container?.viewContext{
             
-            let request : NSFetchRequest<Economy> = Economy.fetchRequest()
+            let request : NSFetchRequest<Marketing> = Marketing.fetchRequest()
             request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
             
-            fetchedResultsController = NSFetchedResultsController<Economy>(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchedResultsController = NSFetchedResultsController<Marketing>(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
             
             try? fetchedResultsController?.performFetch()
             tableView.reloadData()
             fetchedResultsController?.delegate = self
         }
     }
-
-
+    
+    
     private func printDatabaseStatistic(){
         if let context = container?.viewContext{
             context.perform {
-                if let economy = try? context.count(for: Economy.fetchRequest()){
-                    print("\(economy) accounts ammount")
+                if let marketing = try? context.count(for: Marketing.fetchRequest()){
+                    print("\(marketing) accounts ammount")
                 }
             }
         }
     }
-
+   
 }
 
-
-extension TopicsTableViewController{
+extension MarketingTableViewController{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchedResultsController?.sections, sections.count > 0 {
@@ -70,10 +68,10 @@ extension TopicsTableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "topicCell", for: indexPath) as! TopicTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "marketingCell", for: indexPath) as! MarketingTableViewCell
         
-        if let topic = fetchedResultsController?.object(at: indexPath){
-            cell.setUp(topic: topic)
+        if let marketing = fetchedResultsController?.object(at: indexPath){
+            cell.setUp(marketing: marketing)
         }
         
         return cell

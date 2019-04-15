@@ -8,10 +8,10 @@
 
 import Foundation
 
-class DataManager{
+class FileDataManager: DataManager{
     
-    static func getDataFromFileWithSuccess(success: (_ data: Data?) -> Void) {
-        guard let filePathURL = Bundle.main.url(forResource: "topicEconomy", withExtension: "json") else {
+    func getData(resource: Topics, success: (Data?) -> Void) {
+        guard let filePathURL = Bundle.main.url(forResource: resource.rawValue, withExtension: "json") else {
             success(nil)
             return
         }
