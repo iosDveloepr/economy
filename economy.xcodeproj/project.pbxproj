@@ -25,6 +25,8 @@
 		DFD263E02265E0FB0042C250 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263DF2265E0FB0042C250 /* RootRouter.swift */; };
 		DFD263EA2265F6680042C250 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263E92265F6680042C250 /* SignInViewController.swift */; };
 		DFD263EC2265F6830042C250 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD263EB2265F6830042C250 /* Authorization.storyboard */; };
+		DFD263EE226605280042C250 /* EconomyTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263ED226605280042C250 /* EconomyTableViewModel.swift */; };
+		DFD263F0226607F80042C250 /* MarketingTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263EF226607F80042C250 /* MarketingTableViewModel.swift */; };
 		DFEF8A842261E323007C53A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF8A832261E323007C53A9 /* AppDelegate.swift */; };
 		DFEF8A862261E323007C53A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF8A852261E323007C53A9 /* MainViewController.swift */; };
 		DFEF8A892261E323007C53A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF8A872261E323007C53A9 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		DFD263DF2265E0FB0042C250 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		DFD263E92265F6680042C250 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DFD263EB2265F6830042C250 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		DFD263ED226605280042C250 /* EconomyTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomyTableViewModel.swift; sourceTree = "<group>"; };
+		DFD263EF226607F80042C250 /* MarketingTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingTableViewModel.swift; sourceTree = "<group>"; };
 		DFEF8A802261E323007C53A9 /* economy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = economy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF8A832261E323007C53A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFEF8A852261E323007C53A9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				DFA427C42263BF1600EED262 /* MainViewModel.swift */,
+				DFD263ED226605280042C250 /* EconomyTableViewModel.swift */,
+				DFD263EF226607F80042C250 /* MarketingTableViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF9485E022650CB000BB577C /* Topics.swift in Sources */,
+				DFD263F0226607F80042C250 /* MarketingTableViewModel.swift in Sources */,
 				DFEF8AA122624F03007C53A9 /* RouterProtocol.swift in Sources */,
 				DF9485D72265026500BB577C /* MarketingTableViewController.swift in Sources */,
 				DF3EDD902264C69600F160DF /* DataManager.swift in Sources */,
@@ -327,6 +334,7 @@
 				DFEF8AAE22628825007C53A9 /* GrdientView.swift in Sources */,
 				DFEF8A842261E323007C53A9 /* AppDelegate.swift in Sources */,
 				DFD263EA2265F6680042C250 /* SignInViewController.swift in Sources */,
+				DFD263EE226605280042C250 /* EconomyTableViewModel.swift in Sources */,
 				DF9485D5226501E800BB577C /* MarketingRouter.swift in Sources */,
 				DFA427C22263BCEA00EED262 /* FileDataManager.swift in Sources */,
 				DFEF8A8C2261E323007C53A9 /* economy.xcdatamodeld in Sources */,
