@@ -1,5 +1,5 @@
 //
-//  MarketingTableViewModel.swift
+//  BusinessTableViewModule.swift
 //  economy
 //
 //  Created by Yermakov Anton on 4/16/19.
@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 import CoreData
 
-class MarketingTableViewModel{
+class BusinessTableViewModel{
     
     var container : NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
-    var fetchedResultsController: NSFetchedResultsController<Marketing>?
+    var fetchedResultsController: NSFetchedResultsController<Business>?
     
     func updateUI(completition: () -> Void){
         if let context = container?.viewContext{
             
-            let request : NSFetchRequest<Marketing> = Marketing.fetchRequest()
+            let request : NSFetchRequest<Business> = Business.fetchRequest()
             request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
             
-            fetchedResultsController = NSFetchedResultsController<Marketing>(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchedResultsController = NSFetchedResultsController<Business>(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
             
             try? fetchedResultsController?.performFetch()
             completition()

@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         viewModel = MainViewModel(dataManager: dataManager)
         viewModel.loadStationsFromJSON(resource: Topics.Economy)
         viewModel.loadStationsFromJSON(resource: Topics.Marketing)
+        viewModel.loadStationsFromJSON(resource: Topics.Business)
     }
     
 
@@ -32,7 +33,7 @@ class MainViewController: UIViewController {
         case 1:
             MarketingRouter(presenter: self.navigationController).presentMarketingModule()
         case 2:
-            EconomyRouter(presenter: self.navigationController).presentEconomicModule()
+            BusinessRouter(presenter: self.navigationController).presentBusinessModule()
         case 3:
             EconomyRouter(presenter: self.navigationController).presentEconomicModule()
         default:

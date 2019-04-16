@@ -46,6 +46,8 @@ class MainViewModel{
                     _ = try? Economy.findOrCreateEconomy(matching: topicInfo, in: context)
                 case .Marketing:
                     _ = try? Marketing.findOrCreateMarketing(matching: topicInfo, in: context)
+                case .Business:
+                    _ = try? Business.findOrCreateBusiness(matching: topicInfo, in: context)
                 default:
                     break
                 }
