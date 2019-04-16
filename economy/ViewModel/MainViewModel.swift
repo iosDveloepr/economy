@@ -42,14 +42,14 @@ class MainViewModel{
         container?.performBackgroundTask{ context in
             for topicInfo in topics{
                 switch resource{
+                case .Stock:
+                    _ = try? Stock.findOrCreateStock(matching: topicInfo, in: context)
                 case .Economy:
                     _ = try? Economy.findOrCreateEconomy(matching: topicInfo, in: context)
                 case .Marketing:
                     _ = try? Marketing.findOrCreateMarketing(matching: topicInfo, in: context)
                 case .Business:
                     _ = try? Business.findOrCreateBusiness(matching: topicInfo, in: context)
-                default:
-                    break
                 }
             }
             try? context.save()

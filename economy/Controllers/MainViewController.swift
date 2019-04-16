@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class MainViewController: UIViewController {
 
     let dataManager = FileDataManager()
@@ -21,6 +20,7 @@ class MainViewController: UIViewController {
         viewModel.loadStationsFromJSON(resource: Topics.Economy)
         viewModel.loadStationsFromJSON(resource: Topics.Marketing)
         viewModel.loadStationsFromJSON(resource: Topics.Business)
+        viewModel.loadStationsFromJSON(resource: Topics.Stock)
     }
     
 
@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
         case 2:
             BusinessRouter(presenter: self.navigationController).presentBusinessModule()
         case 3:
-            EconomyRouter(presenter: self.navigationController).presentEconomicModule()
+            StockRouter(presenter: self.navigationController).presentStockModule()
         default:
             break
         }

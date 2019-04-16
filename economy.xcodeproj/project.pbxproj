@@ -34,6 +34,13 @@
 		DFD263FC226620370042C250 /* BusinessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263FB226620370042C250 /* BusinessTableViewController.swift */; };
 		DFD263FE2266207B0042C250 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263FD2266207B0042C250 /* BusinessTableViewCell.swift */; };
 		DFD26400226620DF0042C250 /* BusinessTableViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263FF226620DF0042C250 /* BusinessTableViewModule.swift */; };
+		DFD26402226638560042C250 /* Stock.json in Resources */ = {isa = PBXBuildFile; fileRef = DFD26401226638560042C250 /* Stock.json */; };
+		DFD26404226638B00042C250 /* StockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26403226638B00042C250 /* StockTableViewController.swift */; };
+		DFD26406226638E10042C250 /* Stock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD26405226638E10042C250 /* Stock.storyboard */; };
+		DFD26408226639690042C250 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26407226639690042C250 /* Stock.swift */; };
+		DFD2640A226639DF0042C250 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26409226639DF0042C250 /* StockTableViewCell.swift */; };
+		DFD2640C22663B1C0042C250 /* StockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2640B22663B1C0042C250 /* StockRouter.swift */; };
+		DFD2640E22663C340042C250 /* StockTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2640D22663C340042C250 /* StockTableViewModel.swift */; };
 		DFEF8A842261E323007C53A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF8A832261E323007C53A9 /* AppDelegate.swift */; };
 		DFEF8A862261E323007C53A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF8A852261E323007C53A9 /* MainViewController.swift */; };
 		DFEF8A892261E323007C53A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF8A872261E323007C53A9 /* Main.storyboard */; };
@@ -77,6 +84,13 @@
 		DFD263FB226620370042C250 /* BusinessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewController.swift; sourceTree = "<group>"; };
 		DFD263FD2266207B0042C250 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		DFD263FF226620DF0042C250 /* BusinessTableViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewModule.swift; sourceTree = "<group>"; };
+		DFD26401226638560042C250 /* Stock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stock.json; sourceTree = "<group>"; };
+		DFD26403226638B00042C250 /* StockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewController.swift; sourceTree = "<group>"; };
+		DFD26405226638E10042C250 /* Stock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stock.storyboard; sourceTree = "<group>"; };
+		DFD26407226639690042C250 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		DFD26409226639DF0042C250 /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		DFD2640B22663B1C0042C250 /* StockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRouter.swift; sourceTree = "<group>"; };
+		DFD2640D22663C340042C250 /* StockTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewModel.swift; sourceTree = "<group>"; };
 		DFEF8A802261E323007C53A9 /* economy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = economy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF8A832261E323007C53A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFEF8A852261E323007C53A9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +133,7 @@
 				DFA427B82263473700EED262 /* EconomyTableViewCell.swift */,
 				DF9485DC2265049E00BB577C /* MarketingTableViewCell.swift */,
 				DFD263FD2266207B0042C250 /* BusinessTableViewCell.swift */,
+				DFD26409226639DF0042C250 /* StockTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -138,6 +153,7 @@
 				DFA427BD22634B9600EED262 /* Economy.json */,
 				DF3EDD912264CEEA00F160DF /* Marketing.json */,
 				DFD263F322661DB60042C250 /* Business.json */,
+				DFD26401226638560042C250 /* Stock.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -149,6 +165,7 @@
 				DFD263ED226605280042C250 /* EconomyTableViewModel.swift */,
 				DFD263EF226607F80042C250 /* MarketingTableViewModel.swift */,
 				DFD263FF226620DF0042C250 /* BusinessTableViewModule.swift */,
+				DFD2640D22663C340042C250 /* StockTableViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +215,7 @@
 				DFEF8A9E22621906007C53A9 /* EconomyTableViewController.swift */,
 				DF9485D62265026500BB577C /* MarketingTableViewController.swift */,
 				DFD263FB226620370042C250 /* BusinessTableViewController.swift */,
+				DFD26403226638B00042C250 /* StockTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +228,7 @@
 				DFA427BF22637E6D00EED262 /* Economy.swift */,
 				DF3EDD932264DB6900F160DF /* Marketing.swift */,
 				DFD263F522661E980042C250 /* Business.swift */,
+				DFD26407226639690042C250 /* Stock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,10 +256,11 @@
 			isa = PBXGroup;
 			children = (
 				DFEF8AA022624F03007C53A9 /* RouterProtocol.swift */,
+				DFD263DF2265E0FB0042C250 /* RootRouter.swift */,
 				DFEF8AA222624F0A007C53A9 /* EconomyRouter.swift */,
 				DF9485D4226501E800BB577C /* MarketingRouter.swift */,
-				DFD263DF2265E0FB0042C250 /* RootRouter.swift */,
 				DFD263F722661FBB0042C250 /* BusinessRoute.swift */,
+				DFD2640B22663B1C0042C250 /* StockRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -254,6 +274,7 @@
 				DF9485D82265039D00BB577C /* Marketing.storyboard */,
 				DFD263EB2265F6830042C250 /* Authorization.storyboard */,
 				DFD263F922661FE10042C250 /* Business.storyboard */,
+				DFD26405226638E10042C250 /* Stock.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -318,6 +339,8 @@
 			files = (
 				DFD263EC2265F6830042C250 /* Authorization.storyboard in Resources */,
 				DFEF8A912261E325007C53A9 /* LaunchScreen.storyboard in Resources */,
+				DFD26402226638560042C250 /* Stock.json in Resources */,
+				DFD26406226638E10042C250 /* Stock.storyboard in Resources */,
 				DFD263FA22661FE10042C250 /* Business.storyboard in Resources */,
 				DF9485D92265039D00BB577C /* Marketing.storyboard in Resources */,
 				DFEF8A8E2261E325007C53A9 /* Assets.xcassets in Resources */,
@@ -339,12 +362,14 @@
 				DF9485E022650CB000BB577C /* Topics.swift in Sources */,
 				DFD263F0226607F80042C250 /* MarketingTableViewModel.swift in Sources */,
 				DFEF8AA122624F03007C53A9 /* RouterProtocol.swift in Sources */,
+				DFD26404226638B00042C250 /* StockTableViewController.swift in Sources */,
 				DF9485D72265026500BB577C /* MarketingTableViewController.swift in Sources */,
 				DF3EDD902264C69600F160DF /* DataManager.swift in Sources */,
 				DFA427C72263CD9A00EED262 /* FetchedResultsTableViewController.swift in Sources */,
 				DF9485DD2265049E00BB577C /* MarketingTableViewCell.swift in Sources */,
 				DFEF8A9F22621906007C53A9 /* EconomyTableViewController.swift in Sources */,
 				DFA427BB226347C300EED262 /* Topic.swift in Sources */,
+				DFD26408226639690042C250 /* Stock.swift in Sources */,
 				DFD263E02265E0FB0042C250 /* RootRouter.swift in Sources */,
 				DFEF8AA322624F0B007C53A9 /* EconomyRouter.swift in Sources */,
 				DFD26400226620DF0042C250 /* BusinessTableViewModule.swift in Sources */,
@@ -353,9 +378,12 @@
 				DFD263F622661E980042C250 /* Business.swift in Sources */,
 				DF3EDD942264DB6900F160DF /* Marketing.swift in Sources */,
 				DFA427C022637E6D00EED262 /* Economy.swift in Sources */,
+				DFD2640E22663C340042C250 /* StockTableViewModel.swift in Sources */,
+				DFD2640C22663B1C0042C250 /* StockRouter.swift in Sources */,
 				DFA427C52263BF1600EED262 /* MainViewModel.swift in Sources */,
 				DFD263FC226620370042C250 /* BusinessTableViewController.swift in Sources */,
 				DFA427B92263473700EED262 /* EconomyTableViewCell.swift in Sources */,
+				DFD2640A226639DF0042C250 /* StockTableViewCell.swift in Sources */,
 				DFD263F822661FBB0042C250 /* BusinessRoute.swift in Sources */,
 				DFEF8AA522625BD8007C53A9 /* BaseViewController.swift in Sources */,
 				DFEF8AAE22628825007C53A9 /* GrdientView.swift in Sources */,

@@ -18,9 +18,16 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Stock" representedClassName=".Stock" syncable="YES" codeGenerationType="category">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
+        <element name="Business" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="Economy" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Marketing" positionX="-63" positionY="9" width="128" height="105"/>
-        <element name="Business" positionX="-63" positionY="27" width="128" height="105"/>
+        <element name="Stock" positionX="-54" positionY="45" width="128" height="105"/>
     </elements>
 </model>
