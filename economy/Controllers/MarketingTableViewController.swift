@@ -24,8 +24,6 @@ class MarketingTableViewController: FetchedResultsTableViewController {
         printDatabaseStatistic()
     }
     
-    
-    
     private func updateUI(){
         if let context = container?.viewContext{
             

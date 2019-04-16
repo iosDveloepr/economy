@@ -22,6 +22,9 @@
 		DFA427C22263BCEA00EED262 /* FileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA427C12263BCEA00EED262 /* FileDataManager.swift */; };
 		DFA427C52263BF1600EED262 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA427C42263BF1600EED262 /* MainViewModel.swift */; };
 		DFA427C72263CD9A00EED262 /* FetchedResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA427C62263CD9A00EED262 /* FetchedResultsTableViewController.swift */; };
+		DFD263E02265E0FB0042C250 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263DF2265E0FB0042C250 /* RootRouter.swift */; };
+		DFD263EA2265F6680042C250 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263E92265F6680042C250 /* SignInViewController.swift */; };
+		DFD263EC2265F6830042C250 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD263EB2265F6830042C250 /* Authorization.storyboard */; };
 		DFEF8A842261E323007C53A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF8A832261E323007C53A9 /* AppDelegate.swift */; };
 		DFEF8A862261E323007C53A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF8A852261E323007C53A9 /* MainViewController.swift */; };
 		DFEF8A892261E323007C53A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF8A872261E323007C53A9 /* Main.storyboard */; };
@@ -53,6 +56,9 @@
 		DFA427C12263BCEA00EED262 /* FileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDataManager.swift; sourceTree = "<group>"; };
 		DFA427C42263BF1600EED262 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		DFA427C62263CD9A00EED262 /* FetchedResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsTableViewController.swift; sourceTree = "<group>"; };
+		DFD263DF2265E0FB0042C250 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		DFD263E92265F6680042C250 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DFD263EB2265F6830042C250 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		DFEF8A802261E323007C53A9 /* economy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = economy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF8A832261E323007C53A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFEF8A852261E323007C53A9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 				DFEF8A852261E323007C53A9 /* MainViewController.swift */,
 				DFEF8A9E22621906007C53A9 /* EconomyTableViewController.swift */,
 				DF9485D62265026500BB577C /* MarketingTableViewController.swift */,
+				DFD263E92265F6680042C250 /* SignInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 				DFEF8AA022624F03007C53A9 /* RouterProtocol.swift */,
 				DFEF8AA222624F0A007C53A9 /* EconomyRouter.swift */,
 				DF9485D4226501E800BB577C /* MarketingRouter.swift */,
+				DFD263DF2265E0FB0042C250 /* RootRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 				DFEF8AA922625D25007C53A9 /* Economy.storyboard */,
 				DFEF8A8F2261E325007C53A9 /* LaunchScreen.storyboard */,
 				DF9485D82265039D00BB577C /* Marketing.storyboard */,
+				DFD263EB2265F6830042C250 /* Authorization.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD263EC2265F6830042C250 /* Authorization.storyboard in Resources */,
 				DFEF8A912261E325007C53A9 /* LaunchScreen.storyboard in Resources */,
 				DF9485D92265039D00BB577C /* Marketing.storyboard in Resources */,
 				DFEF8A8E2261E325007C53A9 /* Assets.xcassets in Resources */,
@@ -305,6 +315,7 @@
 				DF9485DD2265049E00BB577C /* MarketingTableViewCell.swift in Sources */,
 				DFEF8A9F22621906007C53A9 /* EconomyTableViewController.swift in Sources */,
 				DFA427BB226347C300EED262 /* Topic.swift in Sources */,
+				DFD263E02265E0FB0042C250 /* RootRouter.swift in Sources */,
 				DFEF8AA322624F0B007C53A9 /* EconomyRouter.swift in Sources */,
 				DFEF8A862261E323007C53A9 /* MainViewController.swift in Sources */,
 				DFEF8A9D2261EA2A007C53A9 /* CustomView.swift in Sources */,
@@ -315,6 +326,7 @@
 				DFEF8AA522625BD8007C53A9 /* BaseViewController.swift in Sources */,
 				DFEF8AAE22628825007C53A9 /* GrdientView.swift in Sources */,
 				DFEF8A842261E323007C53A9 /* AppDelegate.swift in Sources */,
+				DFD263EA2265F6680042C250 /* SignInViewController.swift in Sources */,
 				DF9485D5226501E800BB577C /* MarketingRouter.swift in Sources */,
 				DFA427C22263BCEA00EED262 /* FileDataManager.swift in Sources */,
 				DFEF8A8C2261E323007C53A9 /* economy.xcdatamodeld in Sources */,
