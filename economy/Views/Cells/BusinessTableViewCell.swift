@@ -2,7 +2,7 @@
 //  BusinessTableViewCell.swift
 //  economy
 //
-//  Created by Yermakov Anton on 4/16/19.
+//  Created by Yermakov Anton on 4/17/19.
 //  Copyright © 2019 Yermakov Anton. All rights reserved.
 //
 
@@ -12,7 +12,6 @@ class BusinessTableViewCell: UITableViewCell {
     
     @IBOutlet weak var term: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

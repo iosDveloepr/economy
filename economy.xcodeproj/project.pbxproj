@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF11CA7D22673AED00A841EF /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11CA7C22673AED00A841EF /* BusinessTableViewCell.swift */; };
+		DF11CA7F226740AB00A841EF /* EconomyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11CA7E226740AB00A841EF /* EconomyViewController.swift */; };
+		DF11CA8122674E1800A841EF /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11CA8022674E1800A841EF /* CustomTextView.swift */; };
+		DF11CA83226750E200A841EF /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11CA82226750E200A841EF /* CustomLabel.swift */; };
 		DF3EDD902264C69600F160DF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3EDD8F2264C69600F160DF /* DataManager.swift */; };
 		DF3EDD922264CEEA00F160DF /* Marketing.json in Resources */ = {isa = PBXBuildFile; fileRef = DF3EDD912264CEEA00F160DF /* Marketing.json */; };
 		DF3EDD942264DB6900F160DF /* Marketing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3EDD932264DB6900F160DF /* Marketing.swift */; };
@@ -32,7 +36,6 @@
 		DFD263F822661FBB0042C250 /* BusinessRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263F722661FBB0042C250 /* BusinessRoute.swift */; };
 		DFD263FA22661FE10042C250 /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD263F922661FE10042C250 /* Business.storyboard */; };
 		DFD263FC226620370042C250 /* BusinessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263FB226620370042C250 /* BusinessTableViewController.swift */; };
-		DFD263FE2266207B0042C250 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263FD2266207B0042C250 /* BusinessTableViewCell.swift */; };
 		DFD26400226620DF0042C250 /* BusinessTableViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD263FF226620DF0042C250 /* BusinessTableViewModule.swift */; };
 		DFD26402226638560042C250 /* Stock.json in Resources */ = {isa = PBXBuildFile; fileRef = DFD26401226638560042C250 /* Stock.json */; };
 		DFD26404226638B00042C250 /* StockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26403226638B00042C250 /* StockTableViewController.swift */; };
@@ -57,6 +60,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF11CA7C22673AED00A841EF /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
+		DF11CA7E226740AB00A841EF /* EconomyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomyViewController.swift; sourceTree = "<group>"; };
+		DF11CA8022674E1800A841EF /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		DF11CA82226750E200A841EF /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		DF3EDD8F2264C69600F160DF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		DF3EDD912264CEEA00F160DF /* Marketing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Marketing.json; sourceTree = "<group>"; };
 		DF3EDD932264DB6900F160DF /* Marketing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marketing.swift; sourceTree = "<group>"; };
@@ -82,7 +89,6 @@
 		DFD263F722661FBB0042C250 /* BusinessRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRoute.swift; sourceTree = "<group>"; };
 		DFD263F922661FE10042C250 /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		DFD263FB226620370042C250 /* BusinessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewController.swift; sourceTree = "<group>"; };
-		DFD263FD2266207B0042C250 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		DFD263FF226620DF0042C250 /* BusinessTableViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewModule.swift; sourceTree = "<group>"; };
 		DFD26401226638560042C250 /* Stock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stock.json; sourceTree = "<group>"; };
 		DFD26403226638B00042C250 /* StockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewController.swift; sourceTree = "<group>"; };
@@ -132,8 +138,8 @@
 			children = (
 				DFA427B82263473700EED262 /* EconomyTableViewCell.swift */,
 				DF9485DC2265049E00BB577C /* MarketingTableViewCell.swift */,
-				DFD263FD2266207B0042C250 /* BusinessTableViewCell.swift */,
 				DFD26409226639DF0042C250 /* StockTableViewCell.swift */,
+				DF11CA7C22673AED00A841EF /* BusinessTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 				DF9485D62265026500BB577C /* MarketingTableViewController.swift */,
 				DFD263FB226620370042C250 /* BusinessTableViewController.swift */,
 				DFD26403226638B00042C250 /* StockTableViewController.swift */,
+				DF11CA7E226740AB00A841EF /* EconomyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +246,8 @@
 				DF9485DA2265047100BB577C /* Cells */,
 				DFEF8A9C2261EA2A007C53A9 /* CustomView.swift */,
 				DFEF8AAD22628825007C53A9 /* GrdientView.swift */,
+				DF11CA8022674E1800A841EF /* CustomTextView.swift */,
+				DF11CA82226750E200A841EF /* CustomLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,10 +278,10 @@
 			isa = PBXGroup;
 			children = (
 				DFEF8A872261E323007C53A9 /* Main.storyboard */,
-				DFEF8AA922625D25007C53A9 /* Economy.storyboard */,
 				DFEF8A8F2261E325007C53A9 /* LaunchScreen.storyboard */,
-				DF9485D82265039D00BB577C /* Marketing.storyboard */,
 				DFD263EB2265F6830042C250 /* Authorization.storyboard */,
+				DFEF8AA922625D25007C53A9 /* Economy.storyboard */,
+				DF9485D82265039D00BB577C /* Marketing.storyboard */,
 				DFD263F922661FE10042C250 /* Business.storyboard */,
 				DFD26405226638E10042C250 /* Stock.storyboard */,
 			);
@@ -374,21 +383,24 @@
 				DFEF8AA322624F0B007C53A9 /* EconomyRouter.swift in Sources */,
 				DFD26400226620DF0042C250 /* BusinessTableViewModule.swift in Sources */,
 				DFEF8A862261E323007C53A9 /* MainViewController.swift in Sources */,
+				DF11CA7D22673AED00A841EF /* BusinessTableViewCell.swift in Sources */,
 				DFEF8A9D2261EA2A007C53A9 /* CustomView.swift in Sources */,
 				DFD263F622661E980042C250 /* Business.swift in Sources */,
 				DF3EDD942264DB6900F160DF /* Marketing.swift in Sources */,
 				DFA427C022637E6D00EED262 /* Economy.swift in Sources */,
 				DFD2640E22663C340042C250 /* StockTableViewModel.swift in Sources */,
+				DF11CA83226750E200A841EF /* CustomLabel.swift in Sources */,
 				DFD2640C22663B1C0042C250 /* StockRouter.swift in Sources */,
 				DFA427C52263BF1600EED262 /* MainViewModel.swift in Sources */,
+				DF11CA8122674E1800A841EF /* CustomTextView.swift in Sources */,
 				DFD263FC226620370042C250 /* BusinessTableViewController.swift in Sources */,
 				DFA427B92263473700EED262 /* EconomyTableViewCell.swift in Sources */,
 				DFD2640A226639DF0042C250 /* StockTableViewCell.swift in Sources */,
 				DFD263F822661FBB0042C250 /* BusinessRoute.swift in Sources */,
+				DF11CA7F226740AB00A841EF /* EconomyViewController.swift in Sources */,
 				DFEF8AA522625BD8007C53A9 /* BaseViewController.swift in Sources */,
 				DFEF8AAE22628825007C53A9 /* GrdientView.swift in Sources */,
 				DFEF8A842261E323007C53A9 /* AppDelegate.swift in Sources */,
-				DFD263FE2266207B0042C250 /* BusinessTableViewCell.swift in Sources */,
 				DFD263EA2265F6680042C250 /* SignInViewController.swift in Sources */,
 				DFD263EE226605280042C250 /* EconomyTableViewModel.swift in Sources */,
 				DF9485D5226501E800BB577C /* MarketingRouter.swift in Sources */,

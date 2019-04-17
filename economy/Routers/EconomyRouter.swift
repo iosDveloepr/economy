@@ -31,4 +31,10 @@ struct EconomyRouter: RouterProtocol{
         let topicController = controller(type: EconomyTableViewController.self)!
         push(topicController)
     }
+    
+    func presentEconomyDetail(economy: Economy){
+        let detailController = controller(type: EconomyViewController.self)!
+        detailController.economy = economy
+        push(detailController)
+    }
 }

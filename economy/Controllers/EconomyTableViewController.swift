@@ -46,4 +46,9 @@ extension EconomyTableViewController{
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let economy = economyViewModel.fetchedResultsController?.object(at: indexPath)
+        EconomyRouter(presenter: navigationController.self).presentEconomyDetail(economy: economy!)
+    }
+    
 }
