@@ -31,6 +31,7 @@ class Economy: NSManagedObject {
         economy.term = topicInfo.term
         economy.desc = topicInfo.description
         economy.category = topicInfo.category
+        economy.isFavorite = false
         return economy
     }
 }

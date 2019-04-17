@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class EconomyViewController: UIViewController {
     
     var economy: Economy?
+    var container : NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     @IBOutlet weak var economyTitle: UILabel!
     @IBOutlet weak var economyDescription: UITextView!
@@ -18,28 +20,42 @@ class EconomyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-        setUp()
-
+      setUp()
     }
     
     private func setUp(){
-        let button1 = UIBarButtonItem(image: UIImage(named: "add"), style: .plain, target: self, action: #selector(addToFavorite))
-        self.navigationItem.rightBarButtonItem  = button1
+        let toFavorite = UIBarButtonItem(image: UIImage(named: "add"), style: .plain, target: self, action: #selector(addToFavorite))
+        self.navigationItem.rightBarButtonItem = toFavorite
         self.navigationItem.rightBarButtonItem?.tintColor = .white
         
-        economyTitle.text = economy?.term
-        economyDescription.text = economy?.desc
+        guard let economy = economy else { return }
+        
+        economyTitle.text = economy.term
+        economyDescription.text = economy.desc
+        
+        if economy.isFavorite{
+            self.navigationItem.rightBarButtonItem?.tintColor = .yellow
+        }
     }
     
     @objc func addToFavorite(){
+        
+        guard let economy = economy else { return }
        
-        if self.navigationItem.rightBarButtonItem?.tintColor == .white{
-         self.navigationItem.rightBarButtonItem?.tintColor = .yellow
-             print("added")
-        } else {
-            self.navigationItem.rightBarButtonItem?.tintColor = .white
-            print("removed")
+        if let context = container?.viewContext{
+            if economy.isFavorite{
+                self.navigationItem.rightBarButtonItem?.tintColor = .white
+                economy.setValue(false, forKey: "isFavorite")
+            } else {
+                self.navigationItem.rightBarButtonItem?.tintColor = .yellow
+                economy.setValue(true, forKey: "isFavorite")
+            }
+            
+            do{
+                try context.save()
+            } catch {
+                print("Database error")
+            }
         }
     }
  

@@ -20,7 +20,7 @@ class EconomyTableViewController: FetchedResultsTableViewController {
              self.tableView.reloadData()
         }
     }
-  
+    
 }
 
 extension EconomyTableViewController{
