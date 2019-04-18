@@ -23,7 +23,7 @@ class StockTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp(stock: Stock){
+    func setUp(stock: Economy){
         term.text = stock.term
     }
     

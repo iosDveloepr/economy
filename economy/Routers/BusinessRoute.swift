@@ -30,4 +30,10 @@ struct BusinessRouter: RouterProtocol{
         let topicController = controller(type: BusinessTableViewController.self)!
         push(topicController)
     }
+    
+    func presentBusinessDetail(business: Economy){
+        let detailController = controller(type: BusinessViewController.self)!
+        detailController.business = business
+        push(detailController)
+    }
 }

@@ -17,10 +17,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel = MainViewModel(dataManager: dataManager)
-        viewModel.loadStationsFromJSON(resource: Topics.Economy)
-        viewModel.loadStationsFromJSON(resource: Topics.Marketing)
-        viewModel.loadStationsFromJSON(resource: Topics.Business)
-        viewModel.loadStationsFromJSON(resource: Topics.Stock)
+        viewModel.loadDataFromJSON(resource: Topics.Economy)
+        viewModel.loadDataFromJSON(resource: Topics.Marketing)
+        viewModel.loadDataFromJSON(resource: Topics.Business)
+        viewModel.loadDataFromJSON(resource: Topics.Stock)
     }
     
 

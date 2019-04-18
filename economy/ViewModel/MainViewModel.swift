@@ -20,7 +20,7 @@ class MainViewModel{
     }
     
  
-    func loadStationsFromJSON(resource: Topics) {
+    func loadDataFromJSON(resource: Topics) {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
@@ -40,20 +40,13 @@ class MainViewModel{
     
     private func updateDatabase(resource: Topics, topics: [Topic]){
         container?.performBackgroundTask{ context in
-            for topicInfo in topics{
-                switch resource{
-                case .Stock:
-                    _ = try? Stock.findOrCreateStock(matching: topicInfo, in: context)
-                case .Economy:
-                    _ = try? Economy.findOrCreateEconomy(matching: topicInfo, in: context)
-                case .Marketing:
-                    _ = try? Marketing.findOrCreateMarketing(matching: topicInfo, in: context)
-                case .Business:
-                    _ = try? Business.findOrCreateBusiness(matching: topicInfo, in: context)
-                }
+            
+            for topic in topics {
+                _ = try? Economy.findOrCreateEconomy(matching: topic, in: context)
             }
             try? context.save()
         }
     }
+    
     
 }

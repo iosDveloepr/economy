@@ -31,4 +31,10 @@ struct StockRouter: RouterProtocol{
         let stockController = controller(type: StockTableViewController.self)!
         push(stockController)
     }
+    
+    func presentStockDetail(stock: Economy){
+        let detailController = controller(type: StockViewController.self)!
+        detailController.stock = stock
+        push(detailController)
+    }
 }

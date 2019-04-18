@@ -16,7 +16,7 @@ class EconomyTableViewController: FetchedResultsTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         economyViewModel.fetchedResultsController?.delegate = self
-        economyViewModel.updateUI { [unowned self] in
+        economyViewModel.updateUI(withTopic: "economy") { [unowned self] in
              self.tableView.reloadData()
         }
     }

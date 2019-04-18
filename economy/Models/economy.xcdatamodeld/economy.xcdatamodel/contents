@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Business" representedClassName=".Business" syncable="YES" codeGenerationType="category">
-        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="Economy" representedClassName=".Economy" syncable="YES" codeGenerationType="category">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,22 +7,7 @@
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Marketing" representedClassName=".Marketing" syncable="YES" codeGenerationType="category">
-        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Stock" representedClassName=".Stock" syncable="YES" codeGenerationType="category">
-        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <elements>
-        <element name="Business" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="Economy" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="Marketing" positionX="-63" positionY="9" width="128" height="105"/>
-        <element name="Stock" positionX="-54" positionY="45" width="128" height="105"/>
     </elements>
 </model>
