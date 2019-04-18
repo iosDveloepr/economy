@@ -24,15 +24,13 @@ class FavoriteViewController: UIViewController {
         }
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
         segmentControl.selectedSegmentIndex = 0
     }
 
-   
-    func updateUI(){
+   func updateUI(){
         if let context = container?.viewContext{
             
             let request : NSFetchRequest<Economy> = Economy.fetchRequest()
@@ -47,7 +45,6 @@ class FavoriteViewController: UIViewController {
             }
         }
     }
-    
     
     @IBAction func categorySort(_ sender: UISegmentedControl) {
         
@@ -91,6 +88,11 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let favorite = filterdEconomy[indexPath.row]
+        MainRouter(presenter: navigationController.self).presentFavoriteDetail(favorite: favorite)
     }
     
 }
