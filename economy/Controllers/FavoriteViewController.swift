@@ -12,9 +12,13 @@ import CoreData
 class FavoriteViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-     var container : NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    var economy = [Economy](){
+    var container : NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    
+    var economy = [Economy]()
+    
+    var filterdEconomy = [Economy](){
         didSet{
             tableView.reloadData()
         }
@@ -24,6 +28,7 @@ class FavoriteViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
+        segmentControl.selectedSegmentIndex = 0
     }
 
    
@@ -36,9 +41,34 @@ class FavoriteViewController: UIViewController {
             
             do {
               economy = try context.fetch(request)
+              filterdEconomy = economy
             } catch {
                 print("Core data error")
             }
+        }
+    }
+    
+    
+    @IBAction func categorySort(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("all")
+            filterdEconomy = economy
+        case 1:
+            print("economy")
+            filterdEconomy = economy.filter { ($0.category == "economy")}
+        case 2:
+            print("stock")
+            filterdEconomy = economy.filter { ($0.category == "stock")}
+        case 3:
+            print("marketing")
+            filterdEconomy = economy.filter { ($0.category == "marketing")}
+        case 4:
+            print("business")
+            filterdEconomy = economy.filter { ($0.category == "business")}
+        default:
+            print("default")
         }
     }
     
@@ -48,16 +78,19 @@ class FavoriteViewController: UIViewController {
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return economy.count
+        return filterdEconomy.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath) as! FavoriteTableViewCell
-        let topic = economy[indexPath.row]
+        let topic = filterdEconomy[indexPath.row]
         cell.setUp(topic: topic)
         return cell
     }
     
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
     
 }
